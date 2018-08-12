@@ -8,14 +8,14 @@ import Profile from "../containers/Profile";
 const createRoutes = () => {
     return (
         <Route
-            path="/"
+            path={"/"}
             component={Template}
         >
             <IndexRoute 
                 component={Home}                    
             />
             <Route 
-                path="/profile"
+                path={"/profile"}
                 component={Profile}
             />
         </Route>
