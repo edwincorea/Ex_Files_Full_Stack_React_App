@@ -1,28 +1,22 @@
-import React from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import RaisedButton from "material-ui/RaisedButton";
+import React, { Component } from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-class Template extends React.Component {
+import NavDrawer from '../components/NavDrawer'
+
+class Template extends Component {
 
     render() {
         return (
             <MuiThemeProvider>
                 <div>
-                    <header>
-                        <h1>TicTacTuring</h1>                    
-                        <RaisedButton
-                            label={"Test Button"}
-                            primary={true}
-                            onClick={() => { console.log("hello, I work"); }}
-                        />
-                    </header>
+                    <NavDrawer />
                     <main>
                         {this.props.children}
                     </main>
                 </div>                
             </MuiThemeProvider>
-        );
+        )
     }
 }
 
-export default Template;
+export default Template
