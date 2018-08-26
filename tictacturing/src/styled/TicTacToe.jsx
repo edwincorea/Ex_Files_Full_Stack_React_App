@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layer, Line } from 'react-konva'
+import { Layer, Line, Text } from 'react-konva'
 
 export const Board = ({ size, rows, unit }) => {
     let grid = []
@@ -33,6 +33,19 @@ export const Board = ({ size, rows, unit }) => {
     return (
         <Layer>
             {grid}
+        </Layer>
+    )
+}
+
+export const Squares = ({
+    unit, coordinates, gameState, win, 
+    gameOver, yourTurn, ownMark, move
+}) => {
+    return (
+        <Layer>
+            <Text
+
+            />
         </Layer>
     )
 }
