@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Stage } from 'react-konva'
+import { Board } from '../styled/TicTacToe'
 
 class TicTacToe extends Component {
 
@@ -38,14 +39,20 @@ class TicTacToe extends Component {
     }
 
     render() {
+        let { size, rows, unit } = this.state
+
         return (
             <div>
                 <Stage
-                    width={1}
-                    height={1}
+                    width={size}
+                    height={size}
                 >
-                    {/* <Board/> */}
-                    {/* <Squares/> */}
+                    <Board
+                        size={size}
+                        rows={rows}
+                        unit={unit}
+                    />
+                    { /*<Squares/>*/ }
                 </Stage>
             </div>
         )
