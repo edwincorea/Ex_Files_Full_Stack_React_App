@@ -7,14 +7,14 @@ import { NavToggleButton } from '../styled/NavDrawer'
 
 export default class NavDrawer extends Component {
     state = {
-        open: true
+        open: true,
+        width: 250
     }
 
     toggle = () => {
         this.setState((prevState, props) => {
             return {
-                open: !prevState.open,
-                width: 250
+                open: !prevState.open                
             }
         })
     }
@@ -24,6 +24,7 @@ export default class NavDrawer extends Component {
             <div>
                 <NavToggleButton 
                     toggle={this.toggle}
+                    open={this.state.open}
                     width={this.state.width}
                 />
                 <Drawer
