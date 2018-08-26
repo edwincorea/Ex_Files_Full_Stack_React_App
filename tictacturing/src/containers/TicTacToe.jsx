@@ -12,6 +12,13 @@ class TicTacToe extends Component {
         let width = window.innerWidth
         let size = (height < width) ? height * .8 : width * .8
         let rows = this.state.rows
+        let unit = size / rows
+
+        this.setState({
+            size, 
+            rows,
+            unit
+        })
     }
 
     move = () => {
@@ -34,8 +41,8 @@ class TicTacToe extends Component {
         return (
             <div>
                 <Stage
-                    width={}
-                    height={}
+                    width={1}
+                    height={1}
                 >
                     {/* <Board/> */}
                     {/* <Squares/> */}
