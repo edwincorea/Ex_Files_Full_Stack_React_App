@@ -5,7 +5,14 @@ import { Board, Squares } from '../styled/TicTacToe'
 class TicTacToe extends Component {
 
     state = {
-        rows: 3
+        rows: 3,
+        gameState: new Array(9).fill(false),
+        ownMark: 'X',
+        otherMark: 'O',
+        gameOver: false,
+        yourTurn: true,
+        winner: false,
+        win: false    
     }
 
     componentWillMount() {
@@ -29,8 +36,8 @@ class TicTacToe extends Component {
         })
     }
 
-    move = (marker, index) => {
-        console.log('Move made', marker, index)
+    move = (index, marker) => {
+        console.log('Move made', index, marker)
     }
 
     makeAiMove = () => {
