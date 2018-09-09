@@ -15,7 +15,7 @@ const AuthButton = (props) => {
         return (
             <RaisedButton 
                 label={'LogIn / Sign Up'}
-                onClick={props.authshowLock}
+                onClick={props.auth.showLock}
                 fullWidth={true}
                 primary={true}
             />
