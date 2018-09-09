@@ -40,7 +40,8 @@
             "never"
         ],
         "no-console": "off",
-        "no-unused-vars": "warn",        
+        "no-unused-vars": "warn",
+        "no-restricted-globals": "off",
         
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error"
